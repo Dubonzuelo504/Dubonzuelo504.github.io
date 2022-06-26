@@ -1,0 +1,79 @@
+*{
+	padding: 0px;
+	margin: 0 auto;
+}
+.container{
+	width: 1323px;
+	height: 603px;
+	border: solid 1px black;
+	background: linear-gradient(150deg, #03F806, #03F8A2, #F8B903);
+	animation: BgGradient 5s ease infinite;
+}
+.card{
+	position: relative;
+	margin: 20px;
+	width: 400px;
+	height: 500px;
+	float: left;
+	margin-top: 50px;
+	margin-left: 450px;
+}
+.card .face{
+	position: absolute;
+	width: 400px;
+	height: 500px;
+	backface-visibility: hidden;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: .5s;
+}
+.card .font{
+	transform: perspective(600px)rotateY(0deg);
+	box-shadow: 0 5px 10px #000;
+}
+.card .font img{
+	position: absolute;
+	width: 300px;
+	height: 350px;
+	object-fit: cover;
+}
+.card .back{
+	transform: perspective(600px) rotateY(180deg);
+	background: rgb(3, 35, 54);
+	padding: 15px;
+	color: #f3f3f3;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	box-shadow: 0 5px 10px #000;
+}
+.card:hover .front{
+	transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+	transform: perspective(600px) rotateY(360deg); 
+}
+.card .back h3{
+	font-size: 30px;
+	margin-top: 20px;
+	letter-spacing: 3px;
+
+}
+.card .back p{
+	letter-spacing: 1px;
+	margin-top: 50px;
+}
+.card .font h3{
+	position: absolute;
+	bottom: 0;
+	width: 300px;
+	height: 45px;
+	line-height: 45px;
+	color: #fff;
+	background: rgba(0, 0, 0, 1.4);
+	text-align: center;
+}
+#fuenteparaintro{
+	font-family: Copperplate;
+	font-size: 15px;
+}
